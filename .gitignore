@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .env
+
+# Refactoring secrets
+replacements.txt
