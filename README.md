@@ -31,46 +31,34 @@ This project is in the initial stages of development. Features like login, profi
 
 ### Prerequisites
 
-- Node.js (v18 or higher recommended)
-- npm or yarn
+- [Docker](https://docs.docker.com/get-docker/) (includes Docker Compose)
+
+No other dependencies are required — everything runs inside containers.
 
 ### Installation
 
 1. Clone the repository:
-   ```bash
+```bash
    git clone https://github.com/shadow-noctis/LoreLedger.git
-   ```
+```
 2. Navigate to the project directory:
-
 ```bash
-cd LoreLedger
+   cd loreledgerV2
+```
+3. Start the services:
+```bash
+   docker compose up -d
 ```
 
+Open your browser at http://localhost:5173 to view the app.
 
-3. Install dependencies:
-
-```bash
-npm install
-# or
-yarn install
-```
-
-
-4. Start the development server:
-
-```bash
-npm run dev
-```
-
-
-Open your browser at http://localhost:3011
- to view the app.
+> **Note:** The Docker setup is currently configured for local development only, with hot reload enabled. It is not intended for production deployment.
 
 ## Technologies
 
 - **Frontend:** React, JavaScript, Tailwind CSS
-- **Backend**: Node.js
-- **Data Storage**: PostgreSQL:16
-- **Dev Tools / Deployment:** Docker for containerized development and deployment (later implementation)
+- **Backend:** Node.js
+- **Data Storage:** PostgreSQL 16
+- **Dev Tools / Deployment:** Docker for containerized development
 
 *Transform your story creation with a web-based character tracker and fantasy dictionary.*
