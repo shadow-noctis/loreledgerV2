@@ -25,5 +25,7 @@ dist-ssr
 
 .env
 
+data/
+
 # Refactoring secrets
 replacements.txt

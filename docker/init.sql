@@ -1,7 +1,3 @@
-# init.sql
-
-```sql
--- Enable UUID generation
 CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 
 -- =========================
@@ -77,4 +73,3 @@ CREATE TABLE words (
     -- Prevent duplicate words inside the same dictionary
     UNIQUE(dictionary_id, word)
 );
-```
