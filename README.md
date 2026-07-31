@@ -57,7 +57,7 @@ Open your browser at http://localhost:5173 to view the app.
 ## Technologies
 
 - **Frontend:** React, JavaScript, Tailwind CSS
-- **Backend:** Node.js
+- **Backend:** Python
 - **Data Storage:** PostgreSQL 16
 - **Dev Tools / Deployment:** Docker for containerized development
 

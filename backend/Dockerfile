@@ -1,13 +1,17 @@
-FROM node:20-alpine
+FROM python:3.11-slim
 
-WORKDIR /app
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
 
-COPY package.json .
+WORKDIR /backend
 
-RUN npm install -g nodemon
-RUN npm install
+COPY pyproject.toml .
+COPY uv.lock .
+
+ENV UV_PROJECT_ENVIRONMENT=/backend/.venv
+
+RUN uv sync --frozen --no-dev
 
 COPY . .
-EXPOSE 3011
+EXPOSE 8000
 
-CMD ["node", "server.js"]
+CMD ["uv", "run", "uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
